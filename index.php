@@ -3,7 +3,7 @@ session_start();
 session_destroy();
 // header('location:../../../frontend/index.php');
 ?>
-<?php include 'section/header.php';?>
+<?php include 'frontend/section/header.php';?>
 
     <!-- About -->
         <div id="#home">
@@ -66,7 +66,7 @@ session_destroy();
         <div class="carousel">
          <?php
           setlocale(LC_ALL, 'IND');
-          include '../backend/conn.php';
+          include 'backend/conn.php';
           $data = mysqli_query($conn,"select * from activity");
           while($d = mysqli_fetch_array($data)){
             ?>
@@ -90,4 +90,4 @@ session_destroy();
     </div>
   </div>
 
-<?php include 'section/footer.php';?>
+<?php include 'frontend/section/footer.php';?>
